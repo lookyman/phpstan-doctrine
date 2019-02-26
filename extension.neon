@@ -1,3 +1,6 @@
+extensions:
+	validators: PHPStan\DependencyInjection\ValidatorExtension
+
 parameters:
 	doctrine:
 		repositoryClass: null
@@ -55,3 +58,9 @@ services:
 			- phpstan.broker.dynamicMethodReturnTypeExtension
 		arguments:
 			managerClass: Doctrine\Common\Persistence\ObjectManager
+
+	-
+		class: PHPStan\Type\Doctrine\ValidatorRegistry
+
+	-
+		class: PHPStan\Type\Doctrine\PropertyLocator

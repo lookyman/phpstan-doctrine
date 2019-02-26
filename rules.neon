@@ -2,3 +2,26 @@ rules:
 	- PHPStan\Rules\Doctrine\ORM\DqlRule
 	- PHPStan\Rules\Doctrine\ORM\MagicRepositoryMethodCallRule
 	- PHPStan\Rules\Doctrine\ORM\RepositoryMethodCallRule
+	- PHPStan\Rules\Doctrine\ORM\ColumnRule
+
+services:
+	-
+		class: PHPStan\Type\Doctrine\Validator\ArrayTypeValidator
+		tags:
+			- phpstan.doctrine.validator
+	-
+		class: PHPStan\Type\Doctrine\Validator\BigIntTypeValidator
+		tags:
+			- phpstan.doctrine.validator
+	-
+		class: PHPStan\Type\Doctrine\Validator\BinaryTypeValidator
+		tags:
+			- phpstan.doctrine.validator
+	-
+		class: PHPStan\Type\Doctrine\Validator\BlobTypeValidator
+		tags:
+			- phpstan.doctrine.validator
+	-
+		class: PHPStan\Type\Doctrine\Validator\BooleanTypeValidator
+		tags:
+			- phpstan.doctrine.validator
