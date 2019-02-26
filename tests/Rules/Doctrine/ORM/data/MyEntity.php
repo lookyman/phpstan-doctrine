@@ -29,4 +29,10 @@ class MyEntity
 	 */
 	private $transient;
 
+	/**
+	 * @var int
+	 * @ORM\Column(type="bigint")
+	 */
+	private $invalidColumnType;
+
 }
